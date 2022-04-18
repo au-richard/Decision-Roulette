@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import './App.scss';
+import Wheel from './components/Wheel';
 
 class App extends Component {
   constructor(props) {
@@ -27,6 +28,7 @@ class App extends Component {
     return (
       <div className="App">
         <h1>{ this.state.message }</h1>
+        <Wheel />
         <button onClick={this.fetchData} >
           Fetch Data
         </button>        
