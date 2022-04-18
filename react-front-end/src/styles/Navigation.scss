@@ -1,9 +1,16 @@
 .bm-menu {
-  background: #35cd1a;
+  background-color: #3c0096;
+  background-image: url("https://www.transparenttextures.com/patterns/brushed-alum.png");
   padding: 2.5em 1.5em 0;
   font-size: 1.15em;
 }
 
-// .bm-burger-bars {
-//   background: #1f0a61;
-// }
+.menu-item {
+  background-color: #007300;
+  background-image: url("https://www.transparenttextures.com/patterns/black-mamba.png");
+}
+
+.menu-item:hover {
+  background-color: #c37800;
+  background-image: url("https://www.transparenttextures.com/patterns/black-mamba.png");
+}

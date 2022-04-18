@@ -1,0 +1,18 @@
+// @import "styles/variables.scss";
+// @import "styles/mixins.scss";
+
+.wheel_container {
+  display: flex;  
+}
+
+.spin_button {
+  border-radius: 5rem;
+  background-color: rgb(239, 167, 32);
+  height: 5rem;
+  width: 10rem;
+  font-size: 50px;
+}
+
+.spin_button:hover {
+  background-color: bisque;
+}

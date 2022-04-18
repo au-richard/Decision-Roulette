@@ -1,10 +1,13 @@
-import React, { useState } from 'react'
-import { Wheel } from 'react-custom-roulette'
+import React, { useState } from 'react';
+import { Wheel } from 'react-custom-roulette';
+import classNames from "classnames";
+import "../styles/Wheel.scss"
 
 const data = [
-  { option: '0' },
-  { option: '1' },
-  { option: '2' },
+  { option: 'option 1', style: {backgroundColor: 'blue', textColor: 'black'} },
+  { option: 'option 2', style: {backgroundColor: 'purple', textColor: 'orange'} },
+  { option: 'option 3' },
+  { option: 'option 4' },
 ]
 
 export default () => {
@@ -19,16 +22,17 @@ export default () => {
 
   return (
     <>
-      <Wheel
+      <Wheel 
         mustStartSpinning={mustSpin}
         prizeNumber={prizeNumber}
         data={data}
+        className="wheel_container"
 
         onStopSpinning={() => {
           setMustSpin(false);
         }}
       />
-      <button onClick={handleSpinClick}>SPIN</button>
+      <button onClick={handleSpinClick} className='spin_button'>SPIN</button>
     </>
   )
 }

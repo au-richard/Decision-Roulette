@@ -3,6 +3,10 @@ import axios from 'axios';
 import './App.scss';
 import Wheel from './components/Wheel';
 import Navigation from './components/Navigation';
+<<<<<<< HEAD
+=======
+import Header from './components/Header';
+>>>>>>> cda24aaf8196d546a86847997ad666b804c03e6a
 
 class App extends Component {
   constructor(props) {
@@ -29,6 +33,7 @@ class App extends Component {
     return (
       <div className="App">
         <Navigation />
+        <Header />
         <h1>{ this.state.message }</h1>
         <Wheel />
         <button onClick={this.fetchData} >
