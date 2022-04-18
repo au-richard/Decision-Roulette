@@ -1,6 +1,19 @@
 require('dotenv').config();
 
+
+
+
+
+
 module.exports = {
+
+  configObj: {
+    host: process.env.ELE_HOST,
+    user: process.env.ELE_USER,
+    password: process.env.ELE_PW,
+    database: process.env.ELE_DB,
+    port: 5432
+  },
 
   development: {
     client: 'postgresql',

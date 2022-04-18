@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import './App.scss';
+import Wheel from './components/Wheel';
+import Header from './components/Header';
 
 class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      message: 'Click the button to load data!'
+      //message: 'Click the button to load data!'
     }
   }
 
@@ -27,6 +29,8 @@ class App extends Component {
     return (
       <div className="App">
         <h1>{ this.state.message }</h1>
+        <Header />
+        <Wheel />
         <button onClick={this.fetchData} >
           Fetch Data
         </button>        
