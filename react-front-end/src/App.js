@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import './App.scss';
 import Wheel from './components/Wheel';
+import Navigation from './components/Navigation';
+import Header from './components/Header';
 
 class App extends Component {
   constructor(props) {
@@ -27,6 +29,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <Navigation />
+        <Header />
         <h1>{ this.state.message }</h1>
         <Wheel />
         <button onClick={this.fetchData} >
