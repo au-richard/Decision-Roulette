@@ -43,16 +43,29 @@ input[type="text"]::placeholder {
 .category {
   display: flex;
   flex-direction: row;
-  margin-left: 30px;
+  margin-left: 40px;
   
 }
 
 .icon {
   display: flex;
   align-items: center;
+  color: orangered;
+}
+
+.icon_button {
+  background-color: Transparent;
+  // background-repeat:no-repeat;
+  border: none;
+  // cursor:pointer;
+  // overflow: hidden;
+  outline:none;
+  display: flex;
+  align-items: center;
   margin-left: 15px;
   color: orangered;
 }
+
 
 /* CSS */
 // .button-75 {
