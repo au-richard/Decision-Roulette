@@ -35,10 +35,10 @@ import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
-import { Routes, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import '../styles/Navigation.scss';
 
-function Navigation(props) {
+export default function Navigation(props) {
   const drawerWidth = 240;
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
@@ -47,8 +47,8 @@ function Navigation(props) {
   };
   
   return (
-    <div class="sidebar">
-            <div class="sidebar-icon">
+    <div className="sidebar">
+      <div className="sidebar-icon">
 
       <IconButton
         color="inherit"
@@ -58,12 +58,10 @@ function Navigation(props) {
         sx={{ mr: 2, display: { sm: 'none' } }}
       >
         <MenuIcon />
-
       </IconButton>
       </div>
 
       <Drawer
-        // container={container}
         open={mobileOpen}
         onClose={handleDrawerToggle}
         sx={{
@@ -71,6 +69,7 @@ function Navigation(props) {
         }}
       >
         <h3>Logged in as User</h3>
+        {/* Divider Line */}
         <Divider />
         <List>
           <ListItem component={Link} to="/">
@@ -102,10 +101,6 @@ function Navigation(props) {
     </div>
   );
 }
-
-export default Navigation;
-
-
 
 
 
