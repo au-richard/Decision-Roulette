@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import './App.scss';
-import Wheel from './components/Wheel';
 import Navigation from './components/Navigation';
 import About from './components/About';
 import CreateCategory from './components/CreateCategory';
+import ContactInfo from './components/ContactInfo';
 import Home from './components/Home';
 import Header from './components/Header';
 
@@ -32,25 +32,6 @@ class App extends Component {
 
   render() {
     return (
-      // <Router>
-      // {/* <Routes>
-      //   <Route path="/"><App /></Route> 
-      //     <Route path="/create" > <CreateCategory /></Route>
-  
-      //     {/* <Route path="edit" element={<Edit_Category />} />
-      //     <Route path="login" element={<Login />} />
-      //     <Route path="signup" element={<Sign Up />} />
-      //     <Route path="Logout" element={<Logout />} />
-  
-  
-      // </Routes> */}
-      // {/* <Routes>
-      //   <Route path="/create" element={<CreateCategory />} />
-      //   <Route path="/about" element={<About />} />
-      // </Routes> */}
-      //   {/* <Navigation />
-
-      // </Router>, */}
       <div className="App">
         <Router>
           <Navigation />
@@ -59,6 +40,7 @@ class App extends Component {
             <Route index element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/create" element={<CreateCategory />} />
+            <Route path="/contactinfo" element={<ContactInfo />} />
           </Routes>
         </Router>
           <h1>{ this.state.message }</h1>
