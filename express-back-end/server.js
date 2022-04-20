@@ -5,6 +5,8 @@ const pg = require('pg');
 const Client = pg.Client;
 const BodyParser = require('body-parser');
 const { configObj } = require('./knexfile');
+const request = require('request');
+const fs = require('fs');
 const PORT = 8080;
 
 // Express Configuration
@@ -32,3 +34,38 @@ client.query(`SELECT * FROM users;`)
   .then((res) => {
     console.log(res.rows);
   });
+
+  // header = {
+  //   apikey: process.env.API_KEY
+  // }
+
+// const options = {
+//   url: `https://api.goog.io/v1/search/q=books&key=${process.env.API_KEY}`,
+//   qs: '',
+//   json: true,
+
+// }
+  
+// request(options, (error, response, body) => {
+//   if (error) throw new Error(error)
+  
+//   console.log(body)
+// })
+
+// const options = {
+//   method: 'GET',
+//   url: 'https://google-search3.p.rapidapi.com/api/v1/search/q=restuarants',
+//   headers: {
+//     'X-User-Agent': 'desktop',
+//     'X-Proxy-Location': 'CA',
+//     'X-RapidAPI-Host': 'google-search3.p.rapidapi.com',
+//     'X-RapidAPI-Key': process.env.GOOGLE_API_KEY,
+//     useQueryString: true
+//   }
+// };
+
+// request(options, function (error, response, body) {
+// 	if (error) throw new Error(error);
+
+// 	console.log(body);
+// });
