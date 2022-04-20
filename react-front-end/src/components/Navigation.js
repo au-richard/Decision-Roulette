@@ -27,7 +27,9 @@ export default function Navigation(props) {
         onClick={handleDrawerToggle}
         sx={{ mr: 2, display: { sm: 'none' } }}
       >
+        <div className="menu_icon">
         <MenuIcon />
+        </div>
       </IconButton>
       </div>
 

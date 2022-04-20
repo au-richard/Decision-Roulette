@@ -8,9 +8,11 @@
 }
 
 .header_message {
-  font-size: 30px;
+  font-size: 50px;
   color: azure;
   font-family: 'Fredoka One';
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .category_form {
@@ -38,6 +40,19 @@ input[type="text"]::placeholder {
   font-size: 15px;
 }
 
+.category {
+  display: flex;
+  flex-direction: row;
+  margin-left: 30px;
+  
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  margin-left: 15px;
+  color: orangered;
+}
 
 /* CSS */
 // .button-75 {
