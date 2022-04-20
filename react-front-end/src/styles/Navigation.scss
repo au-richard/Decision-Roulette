@@ -1,16 +1,33 @@
-.bm-menu {
-  background-color: #3c0096;
-  background-image: url("https://www.transparenttextures.com/patterns/brushed-alum.png");
-  padding: 2.5em 1.5em 0;
-  font-size: 1.15em;
+// .bm-menu {
+//   background-color: #3c0096;
+//   background-image: url("https://www.transparenttextures.com/patterns/brushed-alum.png");
+//   padding: 2.5em 1.5em 0;
+//   font-size: 1.15em;
+// }
+
+// .menu-item {
+//   background-color: #007300;
+//   background-image: url("https://www.transparenttextures.com/patterns/black-mamba.png");
+// }
+
+// .menu-item:hover {
+//   background-color: #c37800;
+//   background-image: url("https://www.transparenttextures.com/patterns/black-mamba.png");
+// }
+
+.sidebar-icon {
+  display: flex;
+  flex-direction: row;
+  align-self: flex-start;
+  margin-left: 1em;
 }
 
-.menu-item {
-  background-color: #007300;
-  background-image: url("https://www.transparenttextures.com/patterns/black-mamba.png");
+.sidebar {
+  width: 100%;
 }
 
-.menu-item:hover {
-  background-color: #c37800;
-  background-image: url("https://www.transparenttextures.com/patterns/black-mamba.png");
+.MenuIcon {
+  display: flex;
+  flex-direction: row;
+  align-self: flex-start;
 }

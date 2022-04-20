@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import './App.scss';
 import Wheel from './components/Wheel';
 import Navigation from './components/Navigation';
-<<<<<<< HEAD
-=======
+import About from './components/About';
+import CreateCategory from './components/CreateCategory';
+import Home from './components/Home';
 import Header from './components/Header';
->>>>>>> cda24aaf8196d546a86847997ad666b804c03e6a
 
 class App extends Component {
   constructor(props) {
@@ -31,14 +32,37 @@ class App extends Component {
 
   render() {
     return (
+      // <Router>
+      // {/* <Routes>
+      //   <Route path="/"><App /></Route> 
+      //     <Route path="/create" > <CreateCategory /></Route>
+  
+      //     {/* <Route path="edit" element={<Edit_Category />} />
+      //     <Route path="login" element={<Login />} />
+      //     <Route path="signup" element={<Sign Up />} />
+      //     <Route path="Logout" element={<Logout />} />
+  
+  
+      // </Routes> */}
+      // {/* <Routes>
+      //   <Route path="/create" element={<CreateCategory />} />
+      //   <Route path="/about" element={<About />} />
+      // </Routes> */}
+      //   {/* <Navigation />
+
+      // </Router>, */}
       <div className="App">
-        <Navigation />
-        <Header />
-        <h1>{ this.state.message }</h1>
-        <Wheel />
-        <button onClick={this.fetchData} >
-          Fetch Data
-        </button>        
+        <Router>
+          <Navigation />
+          <Header />
+          <Routes>
+            <Route index element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/create" element={<CreateCategory />} />
+          </Routes>
+        </Router>
+          <h1>{ this.state.message }</h1>
+       
       </div>
     );
   }
