@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import '../styles/Header.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowRight} from '@fortawesome/free-solid-svg-icons'
+import { faForward } from '@fortawesome/free-solid-svg-icons'
 import axios from 'axios';
 import App from '../App';
 
@@ -32,15 +32,16 @@ class Header extends Component {
 
     return (
     <>
-    {/* <span style="color: orange">c</span> */}
-    <h4 className="header_message">Decision Roulette</h4>
+    {/* changing font letter colors */}
+    {/* <font color="orange"></font> */}
+    <h4 className="header_message">De<font color="lightblue">c</font>ision Roulette</h4>
     <div className="category">
     <form className='category_form' method='get' action='/'>
       <input type="text" id="form" placeholder='Enter Category'></input>
     </form>
     <div className="icon">
     <button className="icon_button" onClick={this.fetchData}> 
-    <FontAwesomeIcon icon={faArrowRight} />
+    <FontAwesomeIcon icon={faForward} />
     </button>
     </div>
     </div>
