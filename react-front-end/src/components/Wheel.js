@@ -6,8 +6,8 @@ import "../styles/Wheel.scss"
 const data = [
   { option: 'option 1', style: {backgroundColor: 'blue', textColor: 'black'} },
   { option: 'option 2', style: {backgroundColor: 'purple', textColor: 'orange'} },
-  { option: 'option 3' },
-  { option: 'option 4' },
+  { option: 'option 3', style: {backgroundColor: 'green', textColor: 'pink'} },
+  { option: 'option 4', style: {backgroundColor: 'pink', textColor: 'yellow'} },
 ]
 
 export default () => {
