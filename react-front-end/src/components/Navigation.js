@@ -1,6 +1,27 @@
 import React from 'react';
 import { slide as Menu } from 'react-burger-menu';
+import '../styles/Navigation.scss';
 
+class Navigation extends React.Component {
+    showSettings (event) {
+    event.preventDefault();
+  }
+
+
+  render () {
+    return (
+      <Menu>
+        <h3>Logged in as User | <a href="">Logout</a></h3>
+        <a id="home" className="menu-item" href="/">Home</a>
+        <a id="about" className="menu-item" href="/about">About</a>
+        <a id="contact" className="menu-item" href="/contact">Login</a>
+        <a id="contact" className="menu-item" href="/contact">Sign Up</a>
+      </Menu>
+    );
+  }
+}
+
+export default Navigation;
 // class Example extends React.Component {
 //   showSettings (event) {
 //     event.preventDefault();
