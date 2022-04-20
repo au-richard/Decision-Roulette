@@ -1,8 +1,12 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import './App.scss';
-import Wheel from './components/Wheel';
 import Navigation from './components/Navigation';
+import About from './components/About';
+import CreateCategory from './components/CreateCategory';
+import ContactInfo from './components/ContactInfo';
+import Home from './components/Home';
 import Header from './components/Header';
 
 class App extends Component {
@@ -29,13 +33,18 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Navigation />
-        <Header />
-        <h1>{ this.state.message }</h1>
-        <Wheel />
-        <button onClick={this.fetchData} >
-          Fetch Data
-        </button>        
+        <Router>
+          <Navigation />
+          <Header />
+          <Routes>
+            <Route index element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/create" element={<CreateCategory />} />
+            <Route path="/contactinfo" element={<ContactInfo />} />
+          </Routes>
+        </Router>
+          <h1>{ this.state.message }</h1>
+       
       </div>
     );
   }
