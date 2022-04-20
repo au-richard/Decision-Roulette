@@ -25,7 +25,7 @@ export default () => {
 
   return (
     <>
-    <button onClick={handleSpinClick} className='spin_button'>SPIN</button>
+        <button onClick={handleSpinClick} className='spin_button'>SPIN</button>
       <Wheel 
         mustStartSpinning={mustSpin}
         prizeNumber={prizeNumber}

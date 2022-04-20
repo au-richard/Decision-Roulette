@@ -42,9 +42,6 @@ class Header extends Component {
     <button className="icon_button" onClick={this.fetchData}> 
     <FontAwesomeIcon icon={faArrowRight} />
     </button>
-    {/* <button onClick={this.fetchData} >
-      Fetch Data
-    </button> */}
     </div>
     </div>
 
