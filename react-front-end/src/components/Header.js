@@ -45,19 +45,6 @@ class Header extends Component {
     </button>
     </div>
     </div>
-
- 
- 
-
- 
- 
-
- 
- 
-
-
-{/* <!-- HTML !--> */}
-{/* <button class="button-75" role="button"><span class="text">Button 75</span></button> */}
     </>
     );
     }

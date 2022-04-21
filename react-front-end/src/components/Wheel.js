@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, Component } from 'react';
 import { Wheel } from 'react-custom-roulette';
 import classNames from "classnames";
 import "../styles/Wheel.scss"
+import { Howl } from 'howler';
 
 const data = [
   { option: 'option 1', style: {backgroundColor: '#170055', textColor: 'azure', } },
@@ -12,17 +13,17 @@ const data = [
   { option: 'option 6', style: {backgroundColor: '#7FFF00', textColor: '#3E00FF'} }
 ]
 
-
 export default () => {
+
   const [mustSpin, setMustSpin] = useState(false);
   const [prizeNumber, setPrizeNumber] = useState(0);
-
+  
   const handleSpinClick = () => {
     const newPrizeNumber = Math.floor(Math.random() * data.length)
     setPrizeNumber(newPrizeNumber)
     setMustSpin(true)
   }
-
+  
   return (
     <>
         <button onClick={handleSpinClick} className='spin_button'>SPIN</button>
@@ -32,19 +33,19 @@ export default () => {
         data={data}
         outerBorderColor='azure'
         radiusLineColor='azure'
+        className="wheel_container"
+        
+        
+        onStopSpinning={() => {
+          setMustSpin(false);
+        }}
+        />
+    </>
+  )
+}
+
 //attempting to create seperate styling files for data
         // data={[
           //     {option: ""},
         //   {option: 2}
         // ]}
-        className="wheel_container"
-
-
-        onStopSpinning={() => {
-          setMustSpin(false);
-        }}
-      />
-    </>
-  )
-}
-
