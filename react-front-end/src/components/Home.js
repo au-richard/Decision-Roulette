@@ -6,9 +6,6 @@ export default function Home() {
     // React Fragment to group child elements
     <>
       <Wheel />
-    {/* <button onClick={this.fetchData} >
-      Fetch Data
-    </button> */}
     </> 
   );
 }

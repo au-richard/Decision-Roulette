@@ -1,4 +1,67 @@
+// @import "styles/mixins.scss";
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Fredoka+One&family=Hubballi&family=Roboto+Mono:wght@200&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap');
+
 .header {
    display: flex;
-   flex-direction: row;
+   flex-direction: column;
+   font-size: 30px;
+}
+
+.header_message {
+  font-size: 50px;
+  color: azure;
+  font-family: 'Fredoka One';
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.category_form {
+  color: white;
+  border-color: white;
+}
+
+input[type=text] {
+  background: black;
+  color: #39ff14;
+  background: none;
+  border: none;
+  overflow: none;
+  outline: none;
+  box-shadow: none;
+  padding-bottom: 1em;
+  // border-bottom: 3px solid #1EAE98;
+  border-bottom: 3px solid greenyellow;
+}
+
+input[type="text"]::placeholder {
+  text-align: center;
+  color: gainsboro;
+  font-family: 'Fredoka One';
+  font-size: 15px;
+}
+
+.category {
+  display: flex;
+  flex-direction: row;
+  margin-left: 40px;
+  
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+}
+
+.icon_button {
+  background-color: Transparent;
+  // background-repeat:no-repeat;
+  border: none;
+  // cursor:pointer;
+  // overflow: hidden;
+  outline:none;
+  display: flex;
+  align-items: center;
+  margin-left: 15px;
+  color:#3E00FF;
+  font-weight: bolder;
 }

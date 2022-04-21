@@ -1,18 +1,94 @@
 // @import "styles/variables.scss";
 // @import "styles/mixins.scss";
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Fredoka+One&family=Hubballi&family=Roboto+Mono:wght@200&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap');
+
+
+body {
+  background-color: black;
+  font-family: 'Fredoka One';
+}
 
 .wheel_container {
   display: flex;  
+  border-inline-color: green;
+  font-family: 'Fredoka One';
 }
+
+//original button
+
+// .spin_button {
+//   border-radius: 50%;
+//   border-color: black;
+//   // background-color: #1EAE98;
+//   background-color: #22EACA;
+  // height: 5rem;
+  // width: 10rem;
+//   font-size: 40px;
+//   font-family: 'Fredoka One';
+  // margin-top: 25px;
+  // margin-bottom: 10px;
+//   color: orange;
+// }
+
+// .spin_button:hover {
+//   background-color: bisque;
+// }
 
 .spin_button {
-  border-radius: 5rem;
-  background-color: rgba(223, 14, 14, 0.843);
-  height: 5rem;
-  width: 10rem;
-  font-size: 50px;
-}
+  text-decoration: none;
+  // position: absolute;
+  border: none;
+  font-size: 15px;
+  font-family: inherit;
+  color: orange;
+  width: 6em;
+  height: 4em;
+  line-height: 2em;
+  text-align: center;
+  background: linear-gradient(90deg,#03a9f4,purple,#f441a5,#DC143C,#7FFF00, #B5FFD9,#03a9f4);
+  background-size: 300%;
+  border-radius: 100px;
+  z-index: 1;
+  margin-top: 25px;
+  margin-bottom: 15px;
+ }
+ 
+ .spin_button:hover {
+  animation: ani 8s linear infinite;
+  border: none;
+ }
+ 
+ @keyframes ani {
+  0% {
+   background-position: 0%;
+  }
+ 
+  100% {
+   background-position: 400%;
+  }
+ }
+ 
+ .spin_button:before {
+  content: '';
+  // position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  z-index: -1;
+  background: linear-gradient(90deg,#03a9f4,purple,#f441a5,#DC143C,#7FFF00, #B5FFD9,#03a9f4);
+  background-size: 400%;
+  border-radius: 35px;
+  transition: 1s;
+ }
+ 
+ .spin_button:hover::before {
+  filter: blur(20px);
+ }
+ 
+ .spin_button:active {
+  background: linear-gradient(90deg,#03a9f4,purple,#f441a5,#DC143C,#7FFF00, #B5FFD9,#03a9f4);
+ }
 
-.spin_button:hover {
-  background-color: yellow;
-}
+
+
