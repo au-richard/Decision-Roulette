@@ -77,15 +77,11 @@ export default function Navigation(props) {
             </div>
           </ListItem>
           <ListItem component={Link} to="/signup">
-          <div className='nav-item'>
-            <ListItemText primary="Sign Up" />
+            <div className='nav-item'>
+              <ListItemText primary="Sign Up" />
             </div>
           </ListItem>
-          <ListItem component={Link} to="/logout">
-          <div className='nav-item'>
-            <ListItemText primary="Logout" />
-            </div>
-          </ListItem>
+    
           {/* Filling Empty Space Below Nav Bar Items */}
           <ListItem></ListItem>
           <ListItem></ListItem>
@@ -109,6 +105,11 @@ export default function Navigation(props) {
           <ListItem></ListItem>
           <ListItem></ListItem>
           <ListItem></ListItem>
+          <ListItem component={Link} to="/logout">
+          <div className='nav-item'>
+            <ListItemText primary="Logout" />
+            </div>
+          </ListItem>
         </List>
       </div>
       </Drawer>

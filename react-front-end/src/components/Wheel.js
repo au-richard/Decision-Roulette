@@ -30,6 +30,7 @@ export default () => {
 
         onStopSpinning={() => {
           setMustSpin(false);
+          // display search result links (e.g. )
         }}
       />
       <button onClick={handleSpinClick} className='spin_button'>SPIN</button>
