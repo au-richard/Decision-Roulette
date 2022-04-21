@@ -2,7 +2,7 @@ import React, { useState, Component } from 'react';
 import { Wheel } from 'react-custom-roulette';
 import classNames from "classnames";
 import "../styles/Wheel.scss"
-import { Howl } from 'howler';
+import { Howl } from "howler";
 
 const data = [
   { option: 'option 1', style: {backgroundColor: '#170055', textColor: 'azure', } },
@@ -13,20 +13,30 @@ const data = [
   { option: 'option 6', style: {backgroundColor: '#7FFF00', textColor: '#3E00FF'} }
 ]
 
+
 export default () => {
 
-  const [mustSpin, setMustSpin] = useState(false);
-  const [prizeNumber, setPrizeNumber] = useState(0);
-  
-  const handleSpinClick = () => {
-    const newPrizeNumber = Math.floor(Math.random() * data.length)
-    setPrizeNumber(newPrizeNumber)
-    setMustSpin(true)
-  }
-  
-  return (
+    const [mustSpin, setMustSpin] = useState(false);
+    const [prizeNumber, setPrizeNumber] = useState(0);
+    
+    const handleSpinClick = () => {
+      const newPrizeNumber = Math.floor(Math.random() * data.length)
+      setPrizeNumber(newPrizeNumber)
+      setMustSpin(true)
+      soundPlay()
+    }
+
+    const soundPlay = () => {
+      const sound = new Howl ({
+        src: "http://soundbible.com/grab.php?id=673&type=mp3",
+        html5: true
+      })
+      sound.play();
+    }
+
+    return (
     <>
-        <button onClick={handleSpinClick} className='spin_button'>SPIN</button>
+        <button onClick={ handleSpinClick } className='spin_button'>SPIN</button>
       <Wheel 
         mustStartSpinning={mustSpin}
         prizeNumber={prizeNumber}
@@ -34,6 +44,7 @@ export default () => {
         outerBorderColor='azure'
         radiusLineColor='azure'
         className="wheel_container"
+
         
         
         onStopSpinning={() => {
@@ -42,10 +53,4 @@ export default () => {
         />
     </>
   )
-}
-
-//attempting to create seperate styling files for data
-        // data={[
-          //     {option: ""},
-        //   {option: 2}
-        // ]}
+      }
