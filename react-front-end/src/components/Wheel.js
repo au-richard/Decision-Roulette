@@ -2,7 +2,7 @@ import React, { useState, Component } from 'react';
 import { Wheel } from 'react-custom-roulette';
 import classNames from "classnames";
 import "../styles/Wheel.scss"
-import { Howl } from 'howler';
+//import { Howl } from 'howler';
 
 const data = [
   { option: 'option 1', style: {backgroundColor: '#170055', textColor: 'azure', } },
