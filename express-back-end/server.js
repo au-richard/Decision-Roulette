@@ -5,6 +5,8 @@ const pg = require('pg');
 const Client = pg.Client;
 const BodyParser = require('body-parser');
 const { configObj } = require('./knexfile');
+const request = require('request');
+const fs = require('fs');
 const PORT = 8080;
 
 // Express Configuration
