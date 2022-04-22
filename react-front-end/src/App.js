@@ -9,6 +9,10 @@ import ContactInfo from './components/ContactInfo';
 import Home from './components/Home';
 import Header from './components/Header';
 import SearchProvider from './providers/SearchProvider';
+import EditCategory from './components/EditCategory';
+import Login from './components/Login';
+import Logout from './components/Logout';
+import SignUp from './components/SignUp';
 
 class App extends Component {
   constructor(props) {
@@ -44,6 +48,10 @@ class App extends Component {
             <Route path="/about" element={<About />} />
             <Route path="/create" element={<CreateCategory />} />
             <Route path="/contactinfo" element={<ContactInfo />} />
+            <Route path="/edit" element={<EditCategory />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<SignUp />} />
+            <Route path="/logout" element={<Logout />} />
           </Routes>
           </SearchProvider>
         </Router>

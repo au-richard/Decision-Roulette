@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Akshar:wght@300&family=Bungee&family=Fredoka+One&family=Hubballi&family=Roboto+Mono:wght@200&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap');
+
+
 // .bm-menu {
 //   background-color: #3c0096;
 //   background-image: url("https://www.transparenttextures.com/patterns/brushed-alum.png");
@@ -32,7 +35,6 @@
   // display: flex;
   // flex-direction: column;
   // // justify-content: center;
-  // align-items: center;
 }
 
 .username {
@@ -59,4 +61,66 @@
 
 .menu_icon {
   color: azure;
+}
+
+.other_pages {
+  color: white;
+  font-family: akshar;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.brand_icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  color: #3c0096;
+  font-size: 30px;
+}
+
+.new_category input[type=text] {
+  background: black;
+  color: #39ff14;
+  background: none;
+  border: none;
+  overflow: none;
+  outline: none;
+  box-shadow: none;
+  padding-bottom: 1em;
+  // border-bottom: 3px solid #1EAE98;
+  border-bottom: 3px solid purple;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.create_category {
+  margin-top: 25px;
+}
+
+.category_plus {
+  display: flex;
+  flex-direction: row;
+  margin-top: 15px;
+}
+
+.plus {
+  margin-top: 5px;
+  color: azure;
+}
+
+.save_button {
+  margin-top: 20px;
+  background-color: black;
+  color: azure;
+  border: 4px solid #39ff14; /* Green */
+  font-family: "Fredoka One";
+}
+
+.edit {
+  display: flex;
+  justify-content: center;
+  margin-left: 20px;
+  margin-top: 5px;
+  gap: 15px;
+  color: #3E00FF;
 }
