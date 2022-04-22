@@ -16,6 +16,7 @@ export default function SearchProvider(props) {
 
   // Function displays google search result from category
   const fetchSearchResult = function(query) {
+    console.log("query:", query)
     const options = {
       method: 'GET',
       url: 'https://google-search1.p.rapidapi.com/google-search',
@@ -26,6 +27,7 @@ export default function SearchProvider(props) {
       }
     };
     console.log("fetching");
+    console.log("option:", options)
     axios.request(options).then(function (response) {
       //console.log(response.data);
       setSearch(response.data);
@@ -34,15 +36,15 @@ export default function SearchProvider(props) {
       console.error(error);
     });
   };
-  useEffect(() => {
-    fetchSearchResult();
-  }, [])
+  // useEffect(() => {
+  //   fetchSearchResult();
+  // }, [])
   // This list can get long with a lot of functions.  Reducer may be a better choice
   
   const contextValue = {
     data:search, 
-    fetchResults: () => {
-      fetchSearchResult();
+    fetchResults: (value) => {
+      fetchSearchResult(value);
     }}
   // We can now use this as a component to wrap anything 
   // that needs our state
