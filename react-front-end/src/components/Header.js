@@ -4,6 +4,7 @@ import '../styles/Header.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faForward } from '@fortawesome/free-solid-svg-icons'
 import App from '../App';
+import axios from 'axios';
 
 
 export default class Header extends Component {
@@ -26,6 +27,7 @@ export default class Header extends Component {
     {/* <font color="orange"></font> */}
     <h4 className="header_message">De<font color="lightblue">c</font>ision Roulette</h4>
     
+
     </>
     );
   }
