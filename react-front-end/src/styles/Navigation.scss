@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Akshar:wght@300&family=Bungee&family=Fredoka+One&family=Hubballi&family=Roboto+Mono:wght@200&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap');
+
+
 // .bm-menu {
 //   background-color: #3c0096;
 //   background-image: url("https://www.transparenttextures.com/patterns/brushed-alum.png");
@@ -32,7 +35,6 @@
   // display: flex;
   // flex-direction: column;
   // // justify-content: center;
-  // align-items: center;
 }
 
 .username {
@@ -59,4 +61,18 @@
 
 .menu_icon {
   color: azure;
+}
+
+.other_pages {
+  color: white;
+  font-family: akshar;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.brand_icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  color: #3c0096;
 }
