@@ -3,7 +3,7 @@ import Wheel from "./Wheel";
 import useLookUpResult from "./Search";
 import axios from 'axios';
 import App from '../App';
-import SearchProvider, { searchContext } from "../providers/SearchProvider";
+import SearchProvider, { searchContext, fetchSearchResult } from "../providers/SearchProvider";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faForward } from '@fortawesome/free-solid-svg-icons'
 
