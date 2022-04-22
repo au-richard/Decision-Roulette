@@ -8,6 +8,7 @@ import CreateCategory from './components/CreateCategory';
 import ContactInfo from './components/ContactInfo';
 import Home from './components/Home';
 import Header from './components/Header';
+import SearchProvider from './providers/SearchProvider';
 
 class App extends Component {
   constructor(props) {
@@ -36,12 +37,15 @@ class App extends Component {
         <Router>
           <Navigation />
           <Header />
+          <SearchProvider>
           <Routes>
+            {/* Wrapping Home component in google search result provider */}
             <Route index element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/create" element={<CreateCategory />} />
             <Route path="/contactinfo" element={<ContactInfo />} />
           </Routes>
+          </SearchProvider>
         </Router>
           <h1>{ this.state.message }</h1>
       </div>

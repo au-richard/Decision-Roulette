@@ -1,8 +1,12 @@
-import React, { useState, Component } from 'react';
+import React, { useState, Component, useContext } from 'react';
 import { Wheel } from 'react-custom-roulette';
 import classNames from "classnames";
 import "../styles/Wheel.scss"
+import { searchContext } from '../providers/SearchProvider';
+//import search from "./Search";
 // import { Howl } from 'howler';
+
+// loop through fetchResult to obtain data for "option" key in data array below
 
 const data = [
   { option: 'option 1', style: {backgroundColor: '#170055', textColor: 'azure', } },
@@ -14,7 +18,8 @@ const data = [
 ]
 
 export default () => {
-
+  const ctx = useContext(searchContext)
+  console.log(ctx);
   const [mustSpin, setMustSpin] = useState(false);
   const [prizeNumber, setPrizeNumber] = useState(0);
   
@@ -23,6 +28,7 @@ export default () => {
     setPrizeNumber(newPrizeNumber)
     setMustSpin(true)
   }
+
   
   return (
     <>
