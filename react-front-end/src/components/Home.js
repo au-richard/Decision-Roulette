@@ -38,7 +38,8 @@ import { faForward } from '@fortawesome/free-solid-svg-icons'
         <input type="text" id="form" placeholder='Enter Category'></input>
         </form>
       <div className="icon">
-      <button className="icon_button" onClick={ctx.fetchResults()}> 
+        {/* ctx.fetchResults() */}
+      <button className="icon_button" onClick={() => {}}> 
         <FontAwesomeIcon icon={faForward} />
       </button>
       </div>
