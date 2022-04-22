@@ -75,4 +75,52 @@
   justify-content: center;
   gap: 20px;
   color: #3c0096;
+  font-size: 30px;
+}
+
+.new_category input[type=text] {
+  background: black;
+  color: #39ff14;
+  background: none;
+  border: none;
+  overflow: none;
+  outline: none;
+  box-shadow: none;
+  padding-bottom: 1em;
+  // border-bottom: 3px solid #1EAE98;
+  border-bottom: 3px solid purple;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.create_category {
+  margin-top: 25px;
+}
+
+.category_plus {
+  display: flex;
+  flex-direction: row;
+  margin-top: 15px;
+}
+
+.plus {
+  margin-top: 5px;
+  color: azure;
+}
+
+.save_button {
+  margin-top: 20px;
+  background-color: black;
+  color: azure;
+  border: 4px solid #39ff14; /* Green */
+  font-family: "Fredoka One";
+}
+
+.edit {
+  display: flex;
+  justify-content: center;
+  margin-left: 20px;
+  margin-top: 5px;
+  gap: 15px;
+  color: #3E00FF;
 }

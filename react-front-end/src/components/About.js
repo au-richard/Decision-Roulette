@@ -11,12 +11,12 @@ export default function About() {
     <div className="other_pages">
     <h1>About us</h1>
     <p>
-      Three junior web developers, passsionate about helping others with their exestensial crisis', i.e; "WHAT AM I DOING TONIGHT??!!", or "WHAT AM I DOING WITH MY LIFE". We want to help.
+      Three junior web developers, passsionate about helping others with their exestensial crisis', i.e; "WHAT AM I DOING TONIGHT??!!", or "WHAT AM I DOING WITH MY LIFE?!?!?". We want to help.
     </p>
     <div className="brand_icons">
     <FontAwesomeIcon icon={faFacebook} />
-    <FontAwesomeIcon icon={faInstagram} />
-    <FontAwesomeIcon icon={faTwitter} />
+    <font color="crimson"><FontAwesomeIcon icon={faInstagram} /></font>
+    <font color="limegreen"><FontAwesomeIcon icon={faTwitter} /></font>
     </div>
     </div>
   );
