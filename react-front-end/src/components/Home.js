@@ -1,9 +1,9 @@
-import React, { useContext, Component } from "react";
+import React, { useContext, Component, useState } from "react";
 import Wheel from "./Wheel";
 import useLookUpResult from "./Search";
 import axios from 'axios';
 import App from '../App';
-import SearchProvider, { searchContext, fetchSearchResult } from "../providers/SearchProvider";
+import SearchProvider, { searchContext } from "../providers/SearchProvider";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faForward } from '@fortawesome/free-solid-svg-icons'
 
@@ -30,16 +30,23 @@ import { faForward } from '@fortawesome/free-solid-svg-icons'
   function Home() {
     //To do store input query, onClick needs to be an arrow
     const ctx = useContext(searchContext);
+    const [query, setQuery] = useState("");
   return (
     // React Fragment to group child elements
     <>
       <div className="category">
-        <form className='category_form' method='get' action='/'>
-        <input type="text" id="form" placeholder='Enter Category'></input>
+        <form className='category_form' method='get' action='/' onSubmit={event => event.preventDefault()}>
+        <input 
+          type="text" 
+          id="form" 
+          placeholder='Enter Category'
+          value={query}
+          onChange={(event) => setQuery(event.target.value)}
+          />
         </form>
       <div className="icon">
         {/* ctx.fetchResults() */}
-      <button className="icon_button" onClick={() => {}}> 
+      <button className="icon_button" onClick={() => {ctx.fetchResults(query)}}> 
         <FontAwesomeIcon icon={faForward} />
       </button>
       </div>

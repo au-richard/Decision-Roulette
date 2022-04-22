@@ -7,6 +7,7 @@ import { searchContext } from '../providers/SearchProvider';
 // import { Howl } from 'howler';
 
 // loop through fetchResult to obtain data for "option" key in data array below
+import { Howl } from "howler";
 
 const data = [
   { option: 'option 1', style: {backgroundColor: '#170055', textColor: 'azure', } },
@@ -16,6 +17,7 @@ const data = [
   { option: 'option 5', style: {backgroundColor: 'purple', textColor: 'orange'} },
   { option: 'option 6', style: {backgroundColor: '#7FFF00', textColor: '#3E00FF'} }
 ]
+
 
 export default () => {
   const ctx = useContext(searchContext)
@@ -29,10 +31,17 @@ export default () => {
     setMustSpin(true)
   }
 
-  
-  return (
+  const soundPlay = () => {
+    const sound = new Howl ({
+      src: "http://soundbible.com/grab.php?id=673&type=mp3",
+      html5: true
+    })
+    sound.play();
+  }
+
+    return (
     <>
-        <button onClick={handleSpinClick} className='spin_button'>SPIN</button>
+        <button onClick={ handleSpinClick } className='spin_button'>SPIN</button>
       <Wheel 
         mustStartSpinning={mustSpin}
         prizeNumber={prizeNumber}
@@ -40,6 +49,7 @@ export default () => {
         outerBorderColor='azure'
         radiusLineColor='azure'
         className="wheel_container"
+
         
         
         onStopSpinning={() => {
@@ -50,9 +60,3 @@ export default () => {
     </>
   )
 }
-
-//attempting to create seperate styling files for data
-        // data={[
-          //     {option: ""},
-        //   {option: 2}
-        // ]}
