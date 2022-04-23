@@ -1,4 +1,4 @@
-import React, { useState, Component, useContext } from 'react';
+import React, { useState, Component, useContext, useEffect } from 'react';
 import { Wheel } from 'react-custom-roulette';
 import classNames from "classnames";
 import "../styles/Wheel.scss"
@@ -23,17 +23,38 @@ const data = [
 ]
 
 
+
+
 export default () => {
+  const [spinnerData, setSpinnerData] = useState(data)
   const ctx = useContext(searchContext)
-  console.log(ctx.data);
-  // data = [
-  //   { option: (ctx.data.organic[0].title || "option 1"), style: {backgroundColor: '#170055', textColor: 'azure', } },
-  //   { option: (ctx.data.organic[1].title || "option 1"), style: {backgroundColor: '#3E00FF', textColor: 'orange'} },
-  //   { option: (ctx.data.organic[2].title || "option 1"), style: {backgroundColor: '#DC143C', textColor: '#7FFF00'} },
-  //   { option: (ctx.data.organic[3].title || "option 1"), style: {backgroundColor: '#B5FFD9', textColor: '#808080'} },
-  //   { option: (ctx.data.organic[4].title || "option 1"), style: {backgroundColor: 'purple', textColor: 'orange'} },
-  //   { option: (ctx.data.organic[5].title || "option 1"), style: {backgroundColor: '#7FFF00', textColor: '#3E00FF'} }
-  // ]
+  
+  
+  useEffect (() => {
+    if (ctx.data) {
+      const data = [
+        { option: (ctx.data.organic[0].title), style: {backgroundColor: '#170055', textColor: 'azure', } },
+        { option: (ctx.data.organic[1].title), style: {backgroundColor: '#3E00FF', textColor: 'orange'} },
+        { option: (ctx.data.organic[2].title), style: {backgroundColor: '#DC143C', textColor: '#7FFF00'} },
+        { option: (ctx.data.organic[3].title), style: {backgroundColor: '#B5FFD9', textColor: '#808080'} },
+        { option: (ctx.data.organic[4].title), style: {backgroundColor: 'purple', textColor: 'orange'} },
+        { option: (ctx.data.organic[5].title), style: {backgroundColor: '#7FFF00', textColor: '#3E00FF'} }
+      ]
+      setSpinnerData(data);
+      console.log('DATA', data);
+    }
+    
+  }, [ctx.data])
+  const checkData = (data) => {
+    for (let i = 0; i < data.length; i++) {
+      if (data[i].option === undefined) {
+        return data[i].option = "";
+      } else {
+        return data[i].option = ctx.data.organic[i].title
+      }
+    }
+  } 
+
 
   const [mustSpin, setMustSpin] = useState(false);
   const [prizeNumber, setPrizeNumber] = useState(0);
@@ -64,7 +85,8 @@ export default () => {
           message: response.data.message
         });
       })
-  }
+  }      
+      
 
 
   return (
@@ -83,7 +105,7 @@ export default () => {
       <Wheel
         mustStartSpinning={mustSpin}
         prizeNumber={prizeNumber}
-        data={data}
+        data={spinnerData}
         outerBorderColor='azure'
         radiusLineColor='azure'
         className="wheel_container"
