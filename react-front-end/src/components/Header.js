@@ -4,7 +4,7 @@ import '../styles/Header.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faForward } from '@fortawesome/free-solid-svg-icons'
 import App from '../App';
-import axios from 'axios';
+
 
 
 export default class Header extends Component {

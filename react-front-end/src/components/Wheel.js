@@ -3,21 +3,22 @@ import { Wheel } from 'react-custom-roulette';
 import classNames from "classnames";
 import "../styles/Wheel.scss"
 import { searchContext } from '../providers/SearchProvider';
+import { Howl } from "howler";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faForward } from '@fortawesome/free-solid-svg-icons'
+import axios from 'axios';
+
 //import search from "./Search";
 // import { Howl } from 'howler';
 
 // loop through fetchResult to obtain data for "option" key in data array below
-let data = [
-  { option: "option 1", style: {backgroundColor: '#170055', textColor: 'azure', } }
+// let data = [
+//   { option: "option 1", style: {backgroundColor: '#170055', textColor: 'azure', } }
   // { option: (ctx.data.organic[1].title || "option 1"), style: {backgroundColor: '#3E00FF', textColor: 'orange'} },
   // { option: (ctx.data.organic[2].title || "option 1"), style: {backgroundColor: '#DC143C', textColor: '#7FFF00'} },
   // { option: (ctx.data.organic[3].title || "option 1"), style: {backgroundColor: '#B5FFD9', textColor: '#808080'} },
   // { option: (ctx.data.organic[4].title || "option 1"), style: {backgroundColor: 'purple', textColor: 'orange'} },
   // { option: (ctx.data.organic[5].title || "option 1"), style: {backgroundColor: '#7FFF00', textColor: '#3E00FF'} }
-import { Howl } from "howler";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faForward } from '@fortawesome/free-solid-svg-icons'
-import axios from 'axios';
 
 const data = [
   { option: 'option 1', style: { backgroundColor: '#170055', textColor: 'azure', } },
@@ -30,16 +31,16 @@ const data = [
 
 
 export default () => {
-  const ctx = useContext(searchContext)
-  console.log(ctx.data);
-  data = [
-    { option: (ctx.data.organic[0].title || "option 1"), style: {backgroundColor: '#170055', textColor: 'azure', } },
-    { option: (ctx.data.organic[1].title || "option 1"), style: {backgroundColor: '#3E00FF', textColor: 'orange'} },
-    { option: (ctx.data.organic[2].title || "option 1"), style: {backgroundColor: '#DC143C', textColor: '#7FFF00'} },
-    { option: (ctx.data.organic[3].title || "option 1"), style: {backgroundColor: '#B5FFD9', textColor: '#808080'} },
-    { option: (ctx.data.organic[4].title || "option 1"), style: {backgroundColor: 'purple', textColor: 'orange'} },
-    { option: (ctx.data.organic[5].title || "option 1"), style: {backgroundColor: '#7FFF00', textColor: '#3E00FF'} }
-  ]
+  // const ctx = useContext(searchContext)
+  // console.log(ctx.data);
+  // data = [
+  //   { option: (ctx.data.organic[0].title || "option 1"), style: {backgroundColor: '#170055', textColor: 'azure', } },
+  //   { option: (ctx.data.organic[1].title || "option 1"), style: {backgroundColor: '#3E00FF', textColor: 'orange'} },
+  //   { option: (ctx.data.organic[2].title || "option 1"), style: {backgroundColor: '#DC143C', textColor: '#7FFF00'} },
+  //   { option: (ctx.data.organic[3].title || "option 1"), style: {backgroundColor: '#B5FFD9', textColor: '#808080'} },
+  //   { option: (ctx.data.organic[4].title || "option 1"), style: {backgroundColor: 'purple', textColor: 'orange'} },
+  //   { option: (ctx.data.organic[5].title || "option 1"), style: {backgroundColor: '#7FFF00', textColor: '#3E00FF'} }
+  // ]
 
   const [mustSpin, setMustSpin] = useState(false);
   const [prizeNumber, setPrizeNumber] = useState(0);
@@ -76,14 +77,14 @@ export default () => {
   return (
     <>
       <div className="category">
-        <form className='category_form' method='get' action='/'>
+        {/* <form className='category_form' method='get' action='/'>
           <input type="text" id="form" placeholder='Enter Category'></input>
-        </form>
-        <div className="icon">
+        </form> */}
+        {/* <div className="icon">
           <button className="icon_button" onClick={fetchData}>
             <FontAwesomeIcon icon={faForward} />
           </button>
-        </div>
+        </div> */}
       </div>
       <button onClick={handleSpinClick} className='spin_button'>SPIN</button>
       <Wheel
