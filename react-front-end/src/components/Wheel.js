@@ -14,12 +14,12 @@ import { faForward } from '@fortawesome/free-solid-svg-icons'
 import axios from 'axios';
 
 const data = [
-  { option: 'option 1', style: { backgroundColor: '#170055', textColor: 'azure', } },
-  { option: 'option 2', style: { backgroundColor: '#3E00FF', textColor: 'orange' } },
-  { option: 'option 3', style: { backgroundColor: '#DC143C', textColor: '#7FFF00' } },
-  { option: 'option 4', style: { backgroundColor: '#B5FFD9', textColor: '#808080' } },
-  { option: 'option 5', style: { backgroundColor: 'purple', textColor: 'orange' } },
-  { option: 'option 6', style: { backgroundColor: '#7FFF00', textColor: '#3E00FF' } }
+  { option: '', style: { backgroundColor: '#170055', textColor: 'azure', } },
+  { option: '', style: { backgroundColor: '#3E00FF', textColor: 'orange' } },
+  { option: '', style: { backgroundColor: '#DC143C', textColor: '#7FFF00' } },
+  { option: '', style: { backgroundColor: '#B5FFD9', textColor: '#808080' } },
+  { option: '', style: { backgroundColor: 'purple', textColor: 'orange' } },
+  { option: '', style: { backgroundColor: '#7FFF00', textColor: '#3E00FF' } }
 ]
 
 
@@ -32,13 +32,14 @@ export default () => {
   
   useEffect (() => {
     if (ctx.data) {
+      console.log('search:', ctx.data)
       const data = [
-        { option: (ctx.data.organic[0].title), style: {backgroundColor: '#170055', textColor: 'azure', } },
-        { option: (ctx.data.organic[1].title), style: {backgroundColor: '#3E00FF', textColor: 'orange'} },
-        { option: (ctx.data.organic[2].title), style: {backgroundColor: '#DC143C', textColor: '#7FFF00'} },
-        { option: (ctx.data.organic[3].title), style: {backgroundColor: '#B5FFD9', textColor: '#808080'} },
-        { option: (ctx.data.organic[4].title), style: {backgroundColor: 'purple', textColor: 'orange'} },
-        { option: (ctx.data.organic[5].title), style: {backgroundColor: '#7FFF00', textColor: '#3E00FF'} }
+        { option: (ctx.data[0].name), style: {backgroundColor: '#170055', textColor: 'azure', } },
+        { option: (ctx.data[1].name), style: {backgroundColor: '#3E00FF', textColor: 'orange'} },
+        { option: (ctx.data[2].name), style: {backgroundColor: '#DC143C', textColor: '#7FFF00'} },
+        { option: (ctx.data[3].name), style: {backgroundColor: '#B5FFD9', textColor: '#808080'} },
+        { option: (ctx.data[4].name), style: {backgroundColor: 'purple', textColor: 'orange'} },
+        { option: (ctx.data[5].name), style: {backgroundColor: '#7FFF00', textColor: '#3E00FF'} }
       ]
       setSpinnerData(data);
       console.log('DATA', data);
