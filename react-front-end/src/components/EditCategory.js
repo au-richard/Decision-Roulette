@@ -42,7 +42,6 @@ export default function EditCategory() {
         <FontAwesomeIcon icon={faTrash} />
         </div>
       </div>
-
     </>
   );
 }

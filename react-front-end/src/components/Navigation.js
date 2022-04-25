@@ -50,11 +50,6 @@ export default function Navigation(props) {
             <ListItemText primary="Home" />
           </div>
           </ListItem>
-          <ListItem component={Link} to="/about">
-          <div className='nav-item'>
-            <ListItemText primary="About" />
-            </div>
-          </ListItem>
           <ListItem component={Link} to="/create">
           <div className='nav-item'>
             <ListItemText primary="Create Category" />
@@ -66,6 +61,11 @@ export default function Navigation(props) {
             </div>
           </ListItem>
         </List>
+          <ListItem component={Link} to="/about">
+          <div className='nav-item'>
+            <ListItemText primary="About" />
+            </div>
+          </ListItem>
         <Divider />
         <List>
           <ListItem component={Link} to="/contactinfo">

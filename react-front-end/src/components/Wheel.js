@@ -16,7 +16,7 @@ import { faForward } from '@fortawesome/free-solid-svg-icons'
 import axios from 'axios';
 
 const data = [
-  { option: '', style: { backgroundColor: '#170055', textColor: 'azure', } },
+  { option: '', style: { backgroundColor: '#170055', textColor: 'azure' } },
   { option: '', style: { backgroundColor: '#3E00FF', textColor: 'orange' } },
   { option: '', style: { backgroundColor: '#DC143C', textColor: '#7FFF00' } },
   { option: '', style: { backgroundColor: '#B5FFD9', textColor: '#808080' } },

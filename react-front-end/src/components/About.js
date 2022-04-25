@@ -1,10 +1,6 @@
 import React from "react";
-// import ReactDOM from "react-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebook, faInstagram, faTwitter } from '@fortawesome/free-brands-svg-icons'
-
-
-// const element = <FontAwesomeIcon icon={faFacebook} />
 
 export default function About() {
   return (
@@ -21,5 +17,3 @@ export default function About() {
     </div>
   );
 }
-
-// ReactDOM.render(element, document.body)
