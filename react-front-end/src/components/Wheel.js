@@ -31,31 +31,13 @@ export default () => {
     if (ctx.data) {
       console.log("search:", ctx.data);
       const data = [
-        {
-          option: ctx.data[0].name,
-          style: { backgroundColor: "#170055", textColor: "azure" },
-        },
-        {
-          option: ctx.data[1].name,
-          style: { backgroundColor: "#3E00FF", textColor: "orange" },
-        },
-        {
-          option: ctx.data[2].name,
-          style: { backgroundColor: "#DC143C", textColor: "#7FFF00" },
-        },
-        {
-          option: ctx.data[3].name,
-          style: { backgroundColor: "#B5FFD9", textColor: "#808080" },
-        },
-        {
-          option: ctx.data[4].name,
-          style: { backgroundColor: "purple", textColor: "orange" },
-        },
-        {
-          option: ctx.data[5].name,
-          style: { backgroundColor: "#7FFF00", textColor: "#3E00FF" },
-        },
-      ];
+        { option: (ctx.data[0].name.substring(0, 20)), style: {backgroundColor: '#170055', textColor: 'azure', } },
+        { option: (ctx.data[1].name.substring(0, 20)), style: {backgroundColor: '#3E00FF', textColor: 'orange'} },
+        { option: (ctx.data[2].name.substring(0, 20)), style: {backgroundColor: '#DC143C', textColor: '#7FFF00'} },
+        { option: (ctx.data[3].name.substring(0, 20)), style: {backgroundColor: '#B5FFD9', textColor: '#808080'} },
+        { option: (ctx.data[4].name.substring(0, 20)), style: {backgroundColor: 'purple', textColor: 'orange'} },
+        { option: (ctx.data[5].name.substring(0, 20)), style: {backgroundColor: '#7FFF00', textColor: '#3E00FF'} }
+      ]
       setSpinnerData(data);
       console.log("DATA", data);
     }
