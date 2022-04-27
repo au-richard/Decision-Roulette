@@ -46,7 +46,6 @@ export default function SearchProvider(props) {
     const reqFive = axios.request(options);
     const reqSix = axios.request(options);
 
-<<<<<<< HEAD
     axios.all([reqOne, reqTwo, reqThree, reqFour, reqFive, reqSix])
     .then(
       axios.spread((...responses) => {
@@ -76,42 +75,6 @@ export default function SearchProvider(props) {
 // [[Prototype]]: Array(0)
 // success: true
 // [[Prototype]]: Object
-=======
-    axios
-      .all([reqOne, reqTwo, reqThree, reqFour, reqFive, reqSix])
-      .then(
-        axios.spread((...responses) => {
-          const responseOne = responses[0].data.body[0];
-          const responseTwo = responses[1].data.body[0];
-          const responseThree = responses[2].data.body[0];
-          const responseFour = responses[3].data.body[0];
-          const responseFive = responses[4].data.body[0];
-          const responseSix = responses[5].data.body[0];
-          console.log("responses", responseOne, responseTwo);
-          setSearch([
-            responseOne,
-            responseTwo,
-            responseThree,
-            responseFour,
-            responseFive,
-            responseSix,
-          ]);
-        })
-      )
-      .catch(function (error) {
-        // react on errors.
-        console.error(error);
-      });
-    // {data: {…}, status: 200, statusText: 'OK', headers: {…}, config: {…}, …}
-    // config: {transitional: {…}, transformRequest: Array(1), transformResponse: Array(1), timeout: 0, adapter: ƒ, …}
-    // data:
-    //  body: Array(1)
-    //    0: {name: 'old fashioned cocktail', ingredients: Array(8)}
-    //    length: 1
-    // [[Prototype]]: Array(0)
-    // success: true
-    // [[Prototype]]: Object
->>>>>>> df15ed95bc7324e94570293288dd0620ac6d3b2e
 
     // axios.request(options).then(function (response) {
     //   console.log(response.data);
@@ -131,15 +94,10 @@ export default function SearchProvider(props) {
     fetchResults: (value) => {
       fetchSearchResult(value);
     },
-<<<<<<< HEAD
     loading,
     setLoading
   }
   // We can now use this as a component to wrap anything 
-=======
-  };
-  // We can now use this as a component to wrap anything
->>>>>>> df15ed95bc7324e94570293288dd0620ac6d3b2e
   // that needs our state
   return (
     <searchContext.Provider value={contextValue}>
