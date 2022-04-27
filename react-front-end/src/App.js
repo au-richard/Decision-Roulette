@@ -40,7 +40,7 @@ class App extends Component {
                 <Route path="/login" element={<Login />} />
                 <Route path="/signup" element={<SignUp />} />
                 <Route path="/logout" element={<Logout />} />
-                <Route path="/savedcategory" element={<SavedCategory props="" location="" />} />
+                <Route path="/savedcategory" element={<SavedCategory />} />
               </Routes>
             </SearchProvider>
           </CreateProvider>

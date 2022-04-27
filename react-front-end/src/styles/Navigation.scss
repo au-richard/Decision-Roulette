@@ -68,6 +68,7 @@
   font-family: akshar;
   padding-left: 25px;
   padding-right: 25px;
+  margin-top: 30px;
 }
 
 .brand_icons {
@@ -77,6 +78,10 @@
   color: #3c0096;
   font-size: 30px;
 }
+
+// .facebook {
+//   margin-top: 0px;
+// }
 
 .new_category input[type=text] {
   background: black;
@@ -88,9 +93,11 @@
   box-shadow: none;
   padding-bottom: 1em;
   // border-bottom: 3px solid #1EAE98;
+  // border-bottom: 3px solid #DC143C;
   border-bottom: 3px solid purple;
-  margin-top: 10px;
+  margin-top: 20px;
   margin-bottom: 10px;
+  font-family: 'akshar';
 }
 
 .create_category {
@@ -101,6 +108,7 @@
   display: flex;
   flex-direction: row;
   margin-top: 15px;
+  margin-left: 60px;
 }
 
 .plus {
@@ -108,12 +116,34 @@
   color: azure;
 }
 
+// .save_button {
+//   margin-top: 20px;
+//   background-color: black;
+//   color: azure;
+//   border: 3px solid #39ff14; /* Green */
+
+//   font-family: "Fredoka One";
+//   border-radius: 100px;
+// }
+
 .save_button {
-  margin-top: 20px;
-  background-color: black;
-  color: azure;
-  border: 4px solid #39ff14; /* Green */
-  font-family: "Fredoka One";
+  text-decoration: none;
+  // position: absolute;
+  border: none;
+  font-size: 30px;
+  font-family: inherit;
+  font-weight: bold;
+  color: orange;
+  width: 3em;
+  height: 2em;
+  line-height: 2em;
+  text-align: center;
+  background: linear-gradient(90deg,#03a9f4,purple,#f441a5,#DC143C,#7FFF00, #B5FFD9,#03a9f4);
+  background-size: 300%;
+  border-radius: 100px;
+  z-index: 1;
+  margin-top: 25px;
+  margin-bottom: 15px;
 }
 
 .edit {
@@ -123,4 +153,45 @@
   margin-top: 5px;
   gap: 15px;
   color: #3E00FF;
+}
+
+.new_cat_input input[type=text]{
+  background: black;
+  color: #39ff14;
+  background: none;
+  border: none;
+  overflow: none;
+  outline: none;
+  box-shadow: none;
+  padding-bottom: 1em;
+  // border-bottom: 3px solid #1EAE98;
+  border-bottom: 2px solid #03a9f4;
+  // margin-top: 20px;
+  // margin-bottom: 10px;
+  font-family: 'akshar';
+}
+
+.contact {
+  color: white;
+  font-family: akshar;
+  padding-left: 25px;
+  padding-right: 25px;
+  margin-top:45px;
+  margin-bottom:15px;
+}
+
+.sign_up input[type=text]{
+  background: black;
+  color: #39ff14;
+  background: none;
+  border: none;
+  overflow: none;
+  outline: none;
+  box-shadow: none;
+  padding-bottom: 1em;
+  // border-bottom: 3px solid #1EAE98;
+  border-bottom: 3px solid #03a9f4;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-family: 'akshar';
 }

@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useState, createContext, useEffect } from "react";
+import Spinner from 'react-bootstrap/Spinner'
  
 
 
@@ -11,11 +12,14 @@ export default function SearchProvider(props) {
 
   // Here is our Shared State Object
   const [search, setSearch] = useState("");
+  const [loading, setLoading] = useState(false);
+
 
 
 
   // Function displays google search result from category
   const fetchSearchResult = function(query) {
+    setLoading(true);
     console.log("query:", query)
     const options = {
       method: 'GET',
@@ -46,7 +50,9 @@ export default function SearchProvider(props) {
     const reqFive = axios.request(options);
     const reqSix = axios.request(options);
 
-    axios.all([reqOne, reqTwo, reqThree, reqFour, reqFive, reqSix]).then(axios.spread((...responses) => {
+    axios.all([reqOne, reqTwo, reqThree, reqFour, reqFive, reqSix])
+    .then(
+      axios.spread((...responses) => {
       const responseOne = responses[0].data.body[0];
       const responseTwo = responses[1].data.body[0];
       const responseThree = responses[2].data.body[0];
@@ -55,10 +61,15 @@ export default function SearchProvider(props) {
       const responseSix = responses[5].data.body[0];
       console.log('responses', responseOne, responseTwo)
       setSearch([responseOne, responseTwo, responseThree, responseFour, responseFive, responseSix])
-    })).catch(function(error) {
+      setLoading(false)
+    }))
+
+   .catch(function(error) {
+    setLoading(false)
       // react on errors.
       console.error(error);
-    })
+  })
+
 // {data: {…}, status: 200, statusText: 'OK', headers: {…}, config: {…}, …}
 // config: {transitional: {…}, transformRequest: Array(1), transformResponse: Array(1), timeout: 0, adapter: ƒ, …}
 // data:
@@ -86,7 +97,10 @@ export default function SearchProvider(props) {
     data:search, 
     fetchResults: (value) => {
       fetchSearchResult(value);
-    }}
+    },
+    loading,
+    setLoading
+  }
   // We can now use this as a component to wrap anything 
   // that needs our state
   return (

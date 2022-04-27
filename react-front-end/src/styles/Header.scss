@@ -1,5 +1,6 @@
 // @import "styles/mixins.scss";
-@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Fredoka+One&family=Hubballi&family=Roboto+Mono:wght@200&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Akshar:wght@300&family=Bungee&family=Dancing+Script:wght@700&family=Fredoka+One&family=Hubballi&family=Roboto+Mono:wght@200&family=Shadows+Into+Light&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&family=Whisper&display=swap');
+
 
 .header {
    display: flex;
@@ -13,11 +14,15 @@
   font-family: 'Fredoka One';
   margin-top: 10px;
   margin-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  margin-left: 20px;
 }
 
 .category_form {
   color: white;
   border-color: white;
+  margin-top: 15px;
 }
 
 input[type=text] {
@@ -30,21 +35,20 @@ input[type=text] {
   box-shadow: none;
   padding-bottom: 1em;
   // border-bottom: 3px solid #1EAE98;
-  border-bottom: 3px solid greenyellow;
+  border-bottom: 3px solid #7FFF00
 }
 
 input[type="text"]::placeholder {
   text-align: center;
   color: gainsboro;
-  font-family: 'Fredoka One';
-  font-size: 15px;
+  font-family: 'Akshar';
+  font-size: 20px;
 }
 
 .category {
   display: flex;
   flex-direction: row;
   margin-left: 40px;
-  
 }
 
 .icon {
@@ -64,4 +68,25 @@ input[type="text"]::placeholder {
   margin-left: 15px;
   color:#3E00FF;
   font-weight: bolder;
+}
+
+.guide {
+  display: flex;
+  margin-left: 75px;
+  margin-right: 75px;
+  margin-top: 15px;
+  font-family: 'shadows into light', cursive;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.wand {
+  font-size: 20px;
+  // display: flex;
+  // flex-direction: column;
+    outline:none;
+  display: flex;
+  align-items: center;
+  // margin-left: 15px;
+  color: #B5FFD9;
 }

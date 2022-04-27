@@ -21,22 +21,22 @@ const CreateCategory = props => {
   }
   
   return (
-    
+<>
     <div className="other_pages">
-      <h1>Create Category:</h1>
+      <h1>Create Cate<font color="#B5FFD9">g</font>ory:</h1>
       <div className="new_category">
       <form>
         <p>
         <input
         type="text"
-        placeholder="Category Name"
+        placeholder="Category Name +"
         value={seven}
         onChange={(event) => setSeven(event.target.value)}
         />
         </p>
       </form>
-        </div>
-
+</div>
+<div className="new_cat_input">
           <form>
         <p>
           <input
@@ -104,7 +104,8 @@ const CreateCategory = props => {
           />
           </p>
           </form>
-
+          </div>
+          </div>
         <Link
           className="save_button"
           to={{
@@ -114,7 +115,7 @@ const CreateCategory = props => {
           >
           SAVE
         </Link>
-    </div>
+        </>
     );
   };
   
