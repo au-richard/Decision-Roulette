@@ -17,11 +17,24 @@ import CreateProvider from './providers/createProvider';
 
 class App extends Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
       //message: 'Click the button to load data!'
-    }
+    };
   }
+
+  // fetchData = () => {
+  //   axios.get('/api/data') // You can simply make your requests to "/api/whatever you want"
+  //   .then((response) => {
+  //     // handle success
+  //     console.log(response.data) // The entire response from the Rails API
+
+  //     console.log(response.data.message) // Just the message
+  //     this.setState({
+  //       message: response.data.message
+  //     });
+  //   })
+  // }
 
   render() {
     return (
@@ -34,13 +47,20 @@ class App extends Component {
               <Routes>
                 <Route index element={<Home />} />
                 <Route path="/about" element={<About />} />
-                <Route path="/create" element={<CreateCategory />} exact='true' />
+                <Route
+                  path="/create"
+                  element={<CreateCategory />}
+                  exact="true"
+                />
                 <Route path="/contactinfo" element={<ContactInfo />} />
                 <Route path="/edit" element={<EditCategory />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/signup" element={<SignUp />} />
                 <Route path="/logout" element={<Logout />} />
-                <Route path="/savedcategory" element={<SavedCategory />} />
+                <Route
+                  path="/savedcategory"
+                  element={<SavedCategory props="" location="" />}
+                />
               </Routes>
             </SearchProvider>
           </CreateProvider>

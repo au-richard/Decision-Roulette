@@ -1,5 +1,6 @@
 {
   "name": "react-front-end",
+  "authors": "Richard Au, Alexandra Scharfenberger, Phelan Faubert",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

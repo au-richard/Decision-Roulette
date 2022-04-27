@@ -16,7 +16,7 @@ export default function Login() {
         </form> 
         {/* </div>  */}
         <button className="save_button">LOGIN</button>
-    </div>
+      </div>
     </>
   );
 }
