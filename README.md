@@ -3,12 +3,27 @@
 Kismet is a convenient app that helps the user make decisions. Simply enter the category and items you want listed and watch the spinner make the decision for you. Alternatively, you can also have Kismet select from a list of random cocktails for you to try.
 
 ## Final Product
+!["Home page."](https://github.com/au-richard/Kismet/blob/master/docs/home-page-kismet.png?raw=true)
 
-<!-- !["This is Kismet's Homepage."](https://github.com/au-richard/scheduler/blob/master/docs/homepage.png)
+!["Personalized category page."](https://github.com/au-richard/Kismet/blob/master/docs/new-category-kismet.png?raw=true)
 
-!["This is the form for booking an appointment."](https://github.com/au-richard/scheduler/blob/master/docs/appointment-form.png)
+!["About us page."](https://github.com/au-richard/Kismet/blob/master/docs/about-us-kismet.png?raw=true)
 
-!["This is the confirmation for deleting an appointment."](https://github.com/au-richard/scheduler/blob/master/docs/delete-appointment-confirmation.png) -->
+!["New category page."](https://github.com/au-richard/Kismet/blob/master/docs/category-kismet.png?raw=true)
+
+
+!["Edit category page."](https://github.com/au-richard/Kismet/blob/master/docs/edit-category-kismet.png?raw=true)
+
+
+!["How we chose our app name!"](https://github.com/au-richard/Kismet/blob/master/docs/kismet-app-name.png?raw=true)
+
+!["Contact us!"](https://github.com/au-richard/Kismet/blob/master/docs/contact-kismet.png?raw=true)
+
+!["Login page."](https://github.com/au-richard/Kismet/blob/master/docs/login-kismet.png?raw=true)
+
+
+!["Sign up page."](https://github.com/au-richard/Kismet/blob/master/docs/sign-up-kismet.png?raw=true)
+
 
 ## Setup and Running the App
 
