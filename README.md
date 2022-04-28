@@ -7,22 +7,20 @@ Kismet is a convenient app that helps the user make decisions. Simply enter the 
 
 !["Personalized category page."](https://github.com/au-richard/Kismet/blob/master/docs/new-category-kismet.png?raw=true)
 
-!["About us page."](https://github.com/au-richard/Kismet/blob/master/docs/about-us-kismet.png?raw=true)
-
 !["New category page."](https://github.com/au-richard/Kismet/blob/master/docs/category-kismet.png?raw=true)
-
-
-!["Edit category page."](https://github.com/au-richard/Kismet/blob/master/docs/edit-category-kismet.png?raw=true)
-
 
 !["How we chose our app name!"](https://github.com/au-richard/Kismet/blob/master/docs/kismet-app-name.png?raw=true)
 
-!["Contact us!"](https://github.com/au-richard/Kismet/blob/master/docs/contact-kismet.png?raw=true)
+!["Edit category page."](https://github.com/au-richard/Kismet/blob/master/docs/edit-category-kismet.png?raw=true)
 
 !["Login page."](https://github.com/au-richard/Kismet/blob/master/docs/login-kismet.png?raw=true)
 
-
 !["Logout page."](https://github.com/au-richard/Kismet/blob/master/docs/logout-kismet.png?raw=true)
+
+!["About us page."](https://github.com/au-richard/Kismet/blob/master/docs/about-us-kismet.png?raw=true)
+
+!["Contact us!"](https://github.com/au-richard/Kismet/blob/master/docs/contact-kismet.png?raw=true)
+
 
 
 ## Setup and Running the App
