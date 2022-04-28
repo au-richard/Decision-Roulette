@@ -1,5 +1,4 @@
-import axios from "axios";
-import { useState, createContext, useEffect } from "react";
+import { useState, createContext } from "react";
 
 // Create a Context
 export const categoryContext = createContext();
@@ -13,19 +12,6 @@ export default function CreateProvider(props) {
   const createNew = function (createCategory, createInput) {
     setCreate([{ createCategory, createInput }]);
   };
-
-  console.log("fetching");
-  console.log("option:", createNew);
-
-  // const inputName = data.myinput[0]
-  // const inputOne = data.myinput[1]
-  // const inputTwo = data.myinput[2]
-  // const inputThree = data.myinput[3]
-  // const inputFour = data.myinput[4]
-  // const inputFive = data.myinput[5]
-  // const inputSix = data.myinput[6]
-
-  // setMyInput([inputName, inputOne, inputTwo, inputThree, inputFour, inputFive, inputSix])
 
   const createValue = {
     data: create,

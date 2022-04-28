@@ -1,7 +1,5 @@
 import axios from "axios";
 import { useState, createContext, useEffect } from "react";
-import Spinner from 'react-bootstrap/Spinner'
- 
 
 
 // Create a Context
@@ -31,13 +29,6 @@ export default function SearchProvider(props) {
     };
     console.log("fetching");
     console.log("option:", options);
-    // axios.request(options).then(function (response) {
-    //   console.log(response.data);
-    //   setSearch(response.data);
-    // }).catch(function (error) {
-    //   setSearch({organics: []})
-    //   console.error(error);
-    // });
 
     const reqOne = axios.request(options);
     const reqTwo = axios.request(options);
@@ -65,7 +56,7 @@ export default function SearchProvider(props) {
       // react on errors.
       console.error(error);
   })
-
+};
 // {data: {…}, status: 200, statusText: 'OK', headers: {…}, config: {…}, …}
 // config: {transitional: {…}, transformRequest: Array(1), transformResponse: Array(1), timeout: 0, adapter: ƒ, …}
 // data:
@@ -75,19 +66,6 @@ export default function SearchProvider(props) {
 // [[Prototype]]: Array(0)
 // success: true
 // [[Prototype]]: Object
-
-    // axios.request(options).then(function (response) {
-    //   console.log(response.data);
-    //   setSearch(response.data);
-    // }).catch(function (error) {
-    //   setSearch({organics: []})
-    //   console.error(error);
-    // });
-  };
-  // useEffect(() => {
-  //   fetchSearchResult();
-  // }, [])
-  // This list can get long with a lot of functions.  Reducer may be a better choice
 
   const contextValue = {
     data: search,
@@ -105,19 +83,3 @@ export default function SearchProvider(props) {
     </searchContext.Provider>
   );
 }
-
-// const options = {
-//   method: 'GET',
-//   url: 'https://google-search1.p.rapidapi.com/google-search',
-//   params: {hl: 'en', q: 'Cats', gl: 'ca'},
-//   headers: {
-//     'X-RapidAPI-Host': 'google-search1.p.rapidapi.com',
-//     'X-RapidAPI-Key': process.env.REACT_APP_API_KEY
-//   }
-// };
-// axios.request(options).then(function (response) {
-//   //console.log(response.data);
-//   return response.data;
-// }).catch(function (error) {
-//   console.error(error);
-// });

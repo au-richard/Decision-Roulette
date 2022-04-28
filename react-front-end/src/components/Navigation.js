@@ -24,7 +24,6 @@ export default function Navigation(props) {
           aria-label="open drawer"
           edge="start"
           onClick={handleDrawerToggle}
-          // sx={{ mr: 2, display: { sm: "none" } }}
         >
           <div className="menu_icon">
             <MenuIcon />

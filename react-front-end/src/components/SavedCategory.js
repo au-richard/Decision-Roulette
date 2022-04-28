@@ -2,7 +2,6 @@ import React, { useState, Component, useContext, useEffect } from 'react';
 import { Wheel } from 'react-custom-roulette';
 import "../styles/Wheel.scss"
 import { Howl } from "howler";
-import axios from 'axios';
 import { categoryContext } from '../providers/createProvider';
 
 const data = [
@@ -19,15 +18,7 @@ const SavedCategory = props => {
   const [spinnerData, setSpinnerData] = useState("")
   const ctx = useContext(categoryContext)
   
-  const { categoryName } =
-  (props.location && props.location.state) || {};
-
-  console.log("HERE",ctx)
-  
   useEffect (() => {
-    // if (ctx.data) {
-        console.log('search:', ctx.data)
-        console.log("my input", ctx.myinput)
       {
         const data = [
           { option: (ctx.myinput[0]), style: {backgroundColor: '#170055', textColor: 'azure', } },
@@ -60,23 +51,11 @@ const SavedCategory = props => {
     sound.play();
   }
 
-  const fetchData = () => {
-    axios.get('/api/data') // You can simply make your requests to "/api/whatever you want"
-      .then((response) => {
-        // handle success
-        console.log(response.data) // The entire response from the Rails API
-
-        console.log(response.data.message) // Just the message
-        this.setState({
-          message: response.data.message
-        });
-      })
-  }
-
-
   return (
     <>
-    <p><font color="azure">Category:  </font><font color="limegreen">{ctx.myinput[6]}</font></p>
+    <div className="saved_category">
+    <p><font color="azure">Category:  </font><font color="#7fff00">{ctx.myinput[6]}</font></p>
+    </div>
       <button onClick={handleSpinClick} className='spin_button'>SPIN</button>
       <Wheel
         mustStartSpinning={mustSpin}

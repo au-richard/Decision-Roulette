@@ -1,5 +1,3 @@
-// @import "styles/variables.scss";
-// @import "styles/mixins.scss";
 @import url("https://fonts.googleapis.com/css2?family=Bungee&family=Fredoka+One&family=Hubballi&family=Roboto+Mono:wght@200&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap");
 
 body {
@@ -13,29 +11,8 @@ body {
   font-family: "Fredoka One";
 }
 
-//original button
-
-// .spin_button {
-//   border-radius: 50%;
-//   border-color: black;
-//   // background-color: #1EAE98;
-//   background-color: #22EACA;
-// height: 5rem;
-// width: 10rem;
-//   font-size: 40px;
-//   font-family: 'Fredoka One';
-// margin-top: 25px;
-// margin-bottom: 10px;
-//   color: orange;
-// }
-
-// .spin_button:hover {
-//   background-color: bisque;
-// }
-
 .spin_button {
   text-decoration: none;
-  // position: absolute;
   border: none;
   font-size: 30px;
   font-family: inherit;
@@ -44,27 +21,20 @@ body {
   height: 2em;
   line-height: 2em;
   text-align: center;
-  background: linear-gradient(
-    90deg,
-    #03a9f4,
-    purple,
-    #f441a5,
-    #dc143c,
-    #7fff00,
-    #b5ffd9,
-    #03a9f4
-  );
+  background: linear-gradient(90deg,
+      #03a9f4,
+      purple,
+      #f441a5,
+      #dc143c,
+      #7fff00,
+      #b5ffd9,
+      #03a9f4);
   background-size: 300%;
   border-radius: 100px;
   z-index: 1;
   margin-top: 25px;
   margin-bottom: 15px;
 }
-
-//  .spin_button:hover {
-//   animation: ani 8s linear infinite;
-//   border: none;
-//  }
 
 .spin_button:hover {
   -webkit-animation: ani 8s linear infinite;
@@ -84,22 +54,19 @@ body {
 
 .spin_button:before {
   content: "";
-  // position: absolute;
   top: -5px;
   left: -5px;
   right: -5px;
   bottom: -5px;
   z-index: -1;
-  background: linear-gradient(
-    90deg,
-    #03a9f4,
-    purple,
-    #f441a5,
-    #dc143c,
-    #7fff00,
-    #b5ffd9,
-    #03a9f4
-  );
+  background: linear-gradient(90deg,
+      #03a9f4,
+      purple,
+      #f441a5,
+      #dc143c,
+      #7fff00,
+      #b5ffd9,
+      #03a9f4);
   background-size: 400%;
   border-radius: 35px;
   transition: 1s;
@@ -110,14 +77,16 @@ body {
 }
 
 .spin_button:active {
-  background: linear-gradient(
-    90deg,
-    #03a9f4,
-    purple,
-    #f441a5,
-    #dc143c,
-    #7fff00,
-    #b5ffd9,
-    #03a9f4
-  );
+  background: linear-gradient(90deg,
+      #03a9f4,
+      purple,
+      #f441a5,
+      #dc143c,
+      #7fff00,
+      #b5ffd9,
+      #03a9f4);
+}
+
+.saved_category {
+  margin-top: 25px;
 }

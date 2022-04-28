@@ -1,6 +1,5 @@
 import React, { useState, Component, useContext, useEffect } from "react";
 import { Wheel } from "react-custom-roulette";
-import classNames from "classnames";
 import "../styles/Wheel.scss";
 import { searchContext } from "../providers/SearchProvider";
 
@@ -24,8 +23,6 @@ const data = [
 ]
 
 
-
-
 export default () => {
   const [spinnerData, setSpinnerData] = useState(data);
   const ctx = useContext(searchContext);
@@ -34,12 +31,12 @@ export default () => {
     if (ctx.data) {
       console.log("search:", ctx.data);
       const data = [
-        { option: (ctx.data[0].name.substring(0, 20)), style: {backgroundColor: '#170055', textColor: 'azure', } },
-        { option: (ctx.data[1].name.substring(0, 20)), style: {backgroundColor: '#3E00FF', textColor: 'orange'} },
-        { option: (ctx.data[2].name.substring(0, 20)), style: {backgroundColor: '#DC143C', textColor: '#7FFF00'} },
-        { option: (ctx.data[3].name.substring(0, 20)), style: {backgroundColor: '#B5FFD9', textColor: '#808080'} },
-        { option: (ctx.data[4].name.substring(0, 20)), style: {backgroundColor: 'purple', textColor: 'orange'} },
-        { option: (ctx.data[5].name.substring(0, 20)), style: {backgroundColor: '#7FFF00', textColor: '#3E00FF'} }
+        { option: (ctx.data[0].name.substring(0, 20)), style: { backgroundColor: '#170055', textColor: 'azure', } },
+        { option: (ctx.data[1].name.substring(0, 20)), style: { backgroundColor: '#3E00FF', textColor: 'orange' } },
+        { option: (ctx.data[2].name.substring(0, 20)), style: { backgroundColor: '#DC143C', textColor: '#7FFF00' } },
+        { option: (ctx.data[3].name.substring(0, 20)), style: { backgroundColor: '#B5FFD9', textColor: '#808080' } },
+        { option: (ctx.data[4].name.substring(0, 20)), style: { backgroundColor: 'purple', textColor: 'orange' } },
+        { option: (ctx.data[5].name.substring(0, 20)), style: { backgroundColor: '#7FFF00', textColor: '#3E00FF' } }
       ]
       setSpinnerData(data);
       console.log("DATA", data);
@@ -89,16 +86,6 @@ export default () => {
 
   return (
     <>
-      {/* <div className="category">
-        <form className='category_form' method='get' action='/'>
-          <input type="text" id="form" placeholder='Enter Category'></input>
-        </form> */}
-      {/* <div className="icon">
-          <button className="icon_button" onClick={fetchData}>
-            <FontAwesomeIcon icon={faForward} />
-          </button>
-        </div>
-      </div> */}
       <button onClick={handleSpinClick} className="spin_button">
         SPIN
       </button>
