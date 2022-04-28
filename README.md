@@ -22,7 +22,7 @@ Kismet is a convenient app that helps the user make decisions. Simply enter the 
 !["Login page."](https://github.com/au-richard/Kismet/blob/master/docs/login-kismet.png?raw=true)
 
 
-!["Sign up page."](https://github.com/au-richard/Kismet/blob/master/docs/sign-up-kismet.png?raw=true)
+!["Logout page."](https://github.com/au-richard/Kismet/blob/master/docs/logout-kismet.png?raw=true)
 
 
 ## Setup and Running the App
